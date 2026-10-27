@@ -1,5 +1,11 @@
 # Changes
 
+## 2.0.1 - 2026-10-27
+
+- Make root content-folder numbering mandatory: localized Help at `00`, Vault at `01`, consecutive areas from `02`, and optional Archive reserved at `99`.
+- Require future root areas to use the next active number and update root navigation; preserve existing paths until a renumbering migration is approved.
+- Carry the rule into generated AGENTS.md guidelines and setup validation. Root files and tool-required technical directories keep their prescribed names.
+
 ## 2.0.0 - 2026-10-27
 
 ICM Structure changes its setup contract:

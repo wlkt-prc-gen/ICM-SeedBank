@@ -2,7 +2,7 @@
 
 Create a small, understandable workspace for one initiative. Give people and AI agents clear entry points, meaningful areas for their material, and a shared explanation of how the workspace works.
 
-Version: 2.0.0. Use once per workspace. This is a setup seed, not a recurring skill. This version changes the setup contract. Existing workspaces are not automatically migrated; apply changes only through an explicitly approved migration.
+Version: 2.0.1. Use once per workspace. This is a setup seed, not a recurring skill. This version changes the setup contract. Existing workspaces are not automatically migrated; apply changes only through an explicitly approved migration.
 
 Give an AI agent this file and say:
 
@@ -68,6 +68,14 @@ workspace/
     `-- README.md                   # Provenance, replacement, and recovery record
 ```
 
+### Root-folder numbering
+
+Every content folder created directly under the workspace root must have a unique two-digit prefix followed by an underscore. Help is always `00_Help/` (or its localized equivalent) and is the first root folder. The Vault is `01_Vault/`; approved work areas follow consecutively as `02_Area/`, `03_Area/`, `04_Area/`, and so on. Do not skip numbers or reuse a prefix in a new workspace. Translate the descriptive name, keeping the numeric prefix unchanged.
+
+When adding a root area later, inspect the existing tree and use the next unused consecutive number after the highest active root-folder number. For example, after `02_Operations/` and `03_Finance/`, create `04_Marketing/`. Do not create unnumbered content folders or restart numbering for a new area. Reserve `99_Archive/` for the Archive when needed; it sorts last and is the only intentional gap in the initial sequence. Do not allocate `99` to an active area.
+
+This numbering rule applies to content folders at the root, not root files or tool-required technical directories whose exact names must be preserved. Nested folders follow their own area convention. Do not renumber an existing workspace silently: include any gaps, collisions, or proposed renames in the approved migration, then repair all affected links and the root README and AGENTS.md trees together. Keep the numbering rule in the generated AGENTS.md guidelines so future folders follow it after setup.
+
 Help holds the materials used to originate the workspace. Areas hold the actual work. The Vault is a fallback for evidence that has no suitable area; it must not replace the effort to identify useful areas. The Archive is for superseded material, not active sources.
 
 Do not add empty area trees, index files, guides, or templates merely to fill the example. The approved tree must list the actual paths that will be created. New workspaces use README.md for folder context. Migrate existing CONTEXT.md instructions only within approved scope, preserving valid rules and repairing consumers; retain a compatibility pointer if a required consumer cannot migrate.
@@ -87,6 +95,7 @@ Use these essential guidelines, adapting their wording and links to the workspac
 - **Read the root README.md before working.** Then follow the relevant area's README.md and read only the sources needed for the task.
 - **Keep the workspace in the language of the setup request.** Localize generated names and contents, keeping AGENTS.md and README.md as filenames.
 - **Preserve existing work and instructions.** Save and re-read targets before edits; resolve conflicting rules without silently weakening them.
+- **Number every new root content folder in sequence.** Keep localized Help at `00`, Vault at `01`, and work areas at `02`, `03`, and onward; inspect the tree before assigning the next number, reserve `99` for Archive, and update both root navigation files.
 - **Put work in its designated area.** Keep sources and references, reusable methods, and deliverables in their defined locations; use the Vault only when no suitable area exists.
 - **Respect evidence and permissions.** Keep provenance and privacy limits visible; label assumptions and AI synthesis, and obtain the required human approval before consequential actions or sharing.
 - **Keep Help for humans.** The setup request permits creating and maintaining its agreed setup materials during setup; later agents enter only when specifically asked. Routine work must not depend on reading Help.
@@ -135,6 +144,7 @@ Check the generated structure against the approved design:
 
 - All generated contents, folder names, filenames, headings, and tree comments use the request language, with only the defined filename and evidence exceptions.
 - AGENTS.md has exactly three level-two sections in the required order; its introduction is no more than two paragraphs, its tree has comments, and every guideline starts with a bold sentence, including the instruction to read the root README.md.
+- Root content folders have unique two-digit prefixes: Help first at `00`, Vault at `01`, consecutive work areas from `02`, and optional Archive last at `99`; a proposed additional area receives the next active number.
 - The root README explains the initiative and next action; substantial working folders follow README as Design.
 - Only one Questions file exists, inside Help, and no separate intake, status, proposal, implementation, handover, or next-actions files were introduced.
 - Initial material was assessed for meaningful areas before the Vault fallback; provenance, uncertainty, privacy, and external-source links are preserved.
@@ -147,6 +157,7 @@ State whether checks were document walkthroughs or actual execution; do not inve
 
 - [ ] Material questions and the exact structure and migration received human approval before building.
 - [ ] Language follows the setup request, including generated names and contents.
+- [ ] Root content folders are numbered correctly, and the generated guidelines require the next consecutive number for future areas.
 - [ ] AGENTS.md contains only Introduction, Folder tree, and Guidelines as level-two sections.
 - [ ] The root README explains the initiative; working-folder READMEs apply README as Design.
 - [ ] One localized Questions file handles discovery; no separate setup or status files were added.
