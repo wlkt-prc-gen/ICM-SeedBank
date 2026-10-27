@@ -1,5 +1,11 @@
 # Changes
 
+## 2.0.2 - 2026-10-27
+
+- Rename the first work-area subdivision to `01_Instructions/` throughout the Structure seed, including trees, agent guidelines, routing, and validation.
+- Apply the localized equivalent, such as `01_Instrucciones/`, in every applicable area; keep supporting sources and stable constraints there alongside instructions.
+- Existing workspaces migrate folder names and incoming references only through the approved migration process.
+
 ## 2.0.1 - 2026-10-27
 
 - Make root content-folder numbering mandatory: localized Help at `00`, Vault at `01`, consecutive areas from `02`, and optional Archive reserved at `99`.

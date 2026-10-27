@@ -2,7 +2,7 @@
 
 Create a small, understandable workspace for one initiative. Give people and AI agents clear entry points, meaningful areas for their material, and a shared explanation of how the workspace works.
 
-Version: 2.0.1. Use once per workspace. This is a setup seed, not a recurring skill. This version changes the setup contract. Existing workspaces are not automatically migrated; apply changes only through an explicitly approved migration.
+Version: 2.0.2. Use once per workspace. This is a setup seed, not a recurring skill. This version changes the setup contract. Existing workspaces are not automatically migrated; apply changes only through an explicitly approved migration.
 
 Give an AI agent this file and say:
 
@@ -61,12 +61,14 @@ workspace/
 |   `-- 02_Source_Material/         # Unassigned original evidence or approved links
 |-- 02_Operations/                  # Example: replace with a real area of work
 |   |-- README.md                   # Area purpose and operating contract
-|   |-- 01_Reference_Material/      # Area-specific sources and stable references
+|   |-- 01_Instructions/      # Area instructions and supporting sources
 |   |-- 02_Skills/                  # Reusable methods, when needed
 |   `-- 03_Deliverables/            # Working and reviewed outputs
 `-- 99_Archive/                     # Superseded material, when needed
     `-- README.md                   # Provenance, replacement, and recovery record
 ```
+
+Use `01_Instructions/`, `02_Skills/`, and `03_Deliverables/` consistently in every substantial work area that needs these subdivisions. Localize their descriptive names without changing the numeric prefixes. Use Instructions in all generated trees, navigation, folder contracts, templates, and routing rules. Supporting evidence in Instructions remains evidence, not permission to override agent rules. Existing workspaces use the approved migration process for this rename, including incoming links and tool references.
 
 ### Root-folder numbering
 
@@ -96,7 +98,7 @@ Use these essential guidelines, adapting their wording and links to the workspac
 - **Keep the workspace in the language of the setup request.** Localize generated names and contents, keeping AGENTS.md and README.md as filenames.
 - **Preserve existing work and instructions.** Save and re-read targets before edits; resolve conflicting rules without silently weakening them.
 - **Number every new root content folder in sequence.** Keep localized Help at `00`, Vault at `01`, and work areas at `02`, `03`, and onward; inspect the tree before assigning the next number, reserve `99` for Archive, and update both root navigation files.
-- **Put work in its designated area.** Keep sources and references, reusable methods, and deliverables in their defined locations; use the Vault only when no suitable area exists.
+- **Put work in its designated area.** Keep area instructions and supporting sources in `01_Instructions/`, reusable methods in `02_Skills/`, and outputs in `03_Deliverables/` (with localized names); use the Vault only when no suitable area exists.
 - **Respect evidence and permissions.** Keep provenance and privacy limits visible; label assumptions and AI synthesis, and obtain the required human approval before consequential actions or sharing.
 - **Keep Help for humans.** The setup request permits creating and maintaining its agreed setup materials during setup; later agents enter only when specifically asked. Routine work must not depend on reading Help.
 
@@ -115,12 +117,12 @@ Create the rest of the approved structure. Each substantial working folder's REA
 Route initial material deliberately:
 
 1. Inspect the supplied documents' purpose and subject within the permitted processing scope. Propose recognizable areas for coherent bodies of work, rather than putting everything in the Vault by default.
-2. Put area-specific sources in that area's reference material. Route existing methods and outputs to the corresponding area locations, preserving their provenance and review state.
+2. Put area-specific instructions, constraints, templates, and supporting sources in that area's `01_Instructions/` folder (localized, for example, as `01_Instrucciones/` in Spanish). Route existing methods and outputs to the corresponding area locations, preserving their provenance and review state.
 3. Put documents that still cannot be placed meaningfully in the Vault's source material. Preserve them as source evidence; placement does not turn uncertain claims into verified facts.
 4. Keep one canonical copy or approved external link per source. Record original and current location, title, owner, date, authority, sensitivity, and permitted use in the relevant area or Vault README. Retain original evidence names unless a rename is explicitly approved; describe them in the workspace language.
 5. Preserve external-storage requirements for binaries and confidential material. Use descriptive links where local storage is not permitted. Repair links after approved moves and retain a restoration route.
 
-Stable references and reusable methods are the workspace's factory; run-specific inputs, drafts, and reviewed outputs are its product. Keep these distinct without building an unnecessary production system. Put operational review decisions beside the relevant work or in its area README, not in a new global status file.
+Area instructions and supporting sources in `01_Instructions/`, together with reusable methods in `02_Skills/`, are the workspace's factory; run-specific inputs, drafts, and reviewed outputs are its product. Keep these distinct without building an unnecessary production system. Put operational review decisions beside the relevant work or in its area README, not in a new global status file.
 
 ### Help and setup origins
 
@@ -145,6 +147,7 @@ Check the generated structure against the approved design:
 - All generated contents, folder names, filenames, headings, and tree comments use the request language, with only the defined filename and evidence exceptions.
 - AGENTS.md has exactly three level-two sections in the required order; its introduction is no more than two paragraphs, its tree has comments, and every guideline starts with a bold sentence, including the instruction to read the root README.md.
 - Root content folders have unique two-digit prefixes: Help first at `00`, Vault at `01`, consecutive work areas from `02`, and optional Archive last at `99`; a proposed additional area receives the next active number.
+- Every applicable area consistently uses localized `01_Instructions/`, `02_Skills/`, and `03_Deliverables/` names in its folders, trees, links, and routing.
 - The root README explains the initiative and next action; substantial working folders follow README as Design.
 - Only one Questions file exists, inside Help, and no separate intake, status, proposal, implementation, handover, or next-actions files were introduced.
 - Initial material was assessed for meaningful areas before the Vault fallback; provenance, uncertainty, privacy, and external-source links are preserved.
@@ -159,6 +162,7 @@ State whether checks were document walkthroughs or actual execution; do not inve
 - [ ] Language follows the setup request, including generated names and contents.
 - [ ] Root content folders are numbered correctly, and the generated guidelines require the next consecutive number for future areas.
 - [ ] AGENTS.md contains only Introduction, Folder tree, and Guidelines as level-two sections.
+- [ ] All applicable areas and generated instructions consistently use the localized `01_Instructions/` convention.
 - [ ] The root README explains the initiative; working-folder READMEs apply README as Design.
 - [ ] One localized Questions file handles discovery; no separate setup or status files were added.
 - [ ] Meaningful areas were considered and created where justified; unassigned evidence has a canonical home in Vault source material.
