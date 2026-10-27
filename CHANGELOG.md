@@ -1,5 +1,18 @@
 # Changes
 
+## 2.0.0 - 2026-10-27
+
+ICM Structure changes its setup contract:
+
+- Match generated contents, folder names, and filenames to the setup request language; keep AGENTS.md and README.md as filenames.
+- Use README as Design by default.
+- Create exactly three level-two AGENTS.md sections: Introduction, Folder tree, and Guidelines.
+- Replace separate setup and status files with one localized Questions file in Help.
+- Create meaningful work areas for supplied material before using Vault source material as a fallback.
+- Keep setup origins, design rationale, decisions, and checks in Help.
+
+Existing workspaces require an explicitly approved migration; this release does not rewrite them. Wiki and README as Design remain at 1.0.0. Validation covers static package checks and document walkthroughs, not an executed agent pilot.
+
 ## 1.0.0
 
 Initial three-seed package:
