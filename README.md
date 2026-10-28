@@ -4,7 +4,7 @@ One-use Markdown instructions for establishing clear, reviewable AI workspaces. 
 
 | Seed | Use it to |
 |---|---|
-| [ICM Structure](01_ICM_Structure/README.md) | Build a localized workspace with one Questions file, a concise AGENTS.md, and meaningful work areas |
+| [ICM Structure](01_ICM_Structure/README.md) | Build a localized workspace that introduces structure as people need it, with one Questions file and meaningful work areas |
 | [Wiki](Wiki/README.md) | Establish concept cards, source summaries, indexing, and source processing |
 | [README as Design](README_as_Design/README.md) | Put human navigation and agent instructions in one folder entry point |
 
@@ -25,7 +25,7 @@ README files serve humans first, then carry compact agent contracts. Tool-requir
 
 ## Versions and changes
 
-Current package version: 2.0.2. ICM Structure is version 2.0.2; Wiki and README as Design remain version 1.0.0. See [changes](CHANGELOG.md). For repeatable setup, use a GitHub link pinned to a reviewed commit rather than assuming main will stay unchanged. Review later changes before applying them to an existing workspace.
+Current package version: 3.0.0. ICM Structure is version 3.0.0; Wiki and README as Design remain version 1.0.0. See [changes](CHANGELOG.md). For repeatable setup, use a GitHub link pinned to a reviewed commit rather than assuming main will stay unchanged. Review later changes before applying them to an existing workspace.
 
 ## Reuse
 

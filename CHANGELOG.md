@@ -1,5 +1,11 @@
 # Changes
 
+## 3.0.0 - 2026-10-28
+
+- Begin applicable work areas with deliverables and an approved holding place for existing material; preserve existing named instruction and skill folders.
+- Explain the purpose of instructions and skills with examples, introducing their folders later when useful and agreed. The Vault follows its own source-storage pattern.
+- Existing workspaces change only through an approved migration. This changes the setup contract; document review does not establish human usability or an executed agent pilot.
+
 ## 2.0.2 - 2026-10-27
 
 - Rename the first work-area subdivision to `01_Instructions/` throughout the Structure seed, including trees, agent guidelines, routing, and validation.
