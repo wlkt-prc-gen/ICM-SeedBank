@@ -1,5 +1,9 @@
 # Changes
 
+## 3.0.1 - 2026-10-28
+
+- Keep a concise explanation of the progressive folder method and its approval and migration boundaries in each generated root README, accessible to later agent sessions.
+
 ## 3.0.0 - 2026-10-28
 
 - Begin applicable work areas with deliverables and an approved holding place for existing material; preserve existing named instruction and skill folders.

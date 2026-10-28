@@ -25,7 +25,7 @@ README files serve humans first, then carry compact agent contracts. Tool-requir
 
 ## Versions and changes
 
-Current package version: 3.0.0. ICM Structure is version 3.0.0; Wiki and README as Design remain version 1.0.0. See [changes](CHANGELOG.md). For repeatable setup, use a GitHub link pinned to a reviewed commit rather than assuming main will stay unchanged. Review later changes before applying them to an existing workspace.
+Current package version: 3.0.1. ICM Structure is version 3.0.1; Wiki and README as Design remain version 1.0.0. See [changes](CHANGELOG.md). For repeatable setup, use a GitHub link pinned to a reviewed commit rather than assuming main will stay unchanged. Review later changes before applying them to an existing workspace.
 
 ## Reuse
 

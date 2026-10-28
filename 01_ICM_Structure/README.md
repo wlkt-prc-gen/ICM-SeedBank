@@ -2,7 +2,7 @@
 
 Create a small, understandable workspace for one initiative. Give people and AI agents clear entry points, meaningful areas for their material, and a shared explanation of how the workspace works.
 
-Version: 3.0.0. Use once per workspace. This is a setup seed, not a recurring skill. This version changes the setup contract. Existing workspaces are not automatically migrated; apply changes only through an explicitly approved migration.
+Version: 3.0.1. Use once per workspace. This is a setup seed, not a recurring skill. This version changes the setup contract. Existing workspaces are not automatically migrated; apply changes only through an explicitly approved migration.
 
 Give an AI agent this file and say:
 
@@ -76,6 +76,7 @@ Do not create `01_Instructions/` or `02_Skills/` in the first iteration simply b
 Teach the pattern in context, at the person's pace: deliverables are what the team produces; instructions capture the rules, constraints, and supporting sources that guide work; skills capture methods worth repeating. In Questions and the human-facing Help README, use a brief relevant example and explain why separating these can help people find and maintain them. Show the initial tree as the actual proposal; describe the fuller pattern as a possible later development, not as an existing or pre-approved tree. Ask the owner to walk through where an example belongs, and record actual feedback without claiming acceptance or comprehension that was not demonstrated.
 
 When a real need emerges, propose adding the relevant localized `01_Instructions/` or `02_Skills/` folder to an applicable work area, explain the benefit with the material at hand, and agree the change and any moves with the owner before creating it. Add each folder when useful; do not require both at once. Use the numeric prefixes consistently when created. Move or reclassify legacy material only through an approved migration, with affected links and a restoration route. Supporting evidence remains evidence, not permission to override agent rules. Update the relevant README and navigation to reflect the actual structure.
+
 ### Root-folder numbering
 
 Every content folder created directly under the workspace root must have a unique two-digit prefix followed by an underscore. Help is always `00_Help/` (or its localized equivalent) and is the first root folder. The Vault is `01_Vault/`; approved work areas follow consecutively as `02_Area/`, `03_Area/`, `04_Area/`, and so on. Do not skip numbers or reuse a prefix in a new workspace. Translate the descriptive name, keeping the numeric prefix unchanged.
@@ -116,6 +117,8 @@ Create a slightly fuller explanation of what the initiative is, who it serves, w
 
 Follow README as Design: start with a short human introduction and one obvious next action; then add localized agent instructions for scope, authority, navigation, source rules, review points, and maintenance. Link each real area and its README. State the current next action and owner here instead of creating a separate tracking file. Link to Help for people, while making clear that routine agents do not read it.
 
+In the root README, include a concise, localized summary of the progressive folder method for people and future agent sessions. Explain that deliverables are the work produced, instructions hold guidance and supporting sources, and skills hold repeatable methods; relate the distinction to a brief relevant example. Describe the actual initial structure and preserve existing named instruction and skill folders. Explain that an agent should propose each additional instructions or skills folder only when a real need emerges, explain its benefit, and agree it and any moves with the owner before creating it. Preserve legacy material and require an approved migration with link repair and a restoration route for reclassification or moves. State that the Vault is exempt, and update navigation to reflect actual changes. Do not present possible future folders as already created. Keep this operational summary accessible here without requiring routine agents to enter Help.
+
 ### Third: areas, sources, and remaining README files
 
 Create the rest of the approved structure. Each substantial working folder's README.md starts with its purpose, what belongs there, and a useful next link. Its localized agent instructions define the relevant inputs and authority, process, exact output destinations, review boundaries, and maintenance or recovery. Link detailed content rather than repeating it.
@@ -155,7 +158,7 @@ Check the generated structure against the approved design:
 - Root content folders have unique two-digit prefixes: Help first at `00`, Vault at `01`, consecutive work areas from `02`, and optional Archive last at `99`; a proposed additional area receives the next active number.
 - Each applicable area starts with localized `03_Deliverables/`; initial legacy material has an approved holding place, and previously named instruction and skill folders are preserved. No new instruction or skill folder is created prematurely. The Vault is exempt from the work-area pattern.
 - Questions and Help explain the three folder purposes with a relevant example and distinguish the actual initial tree from possible later additions; record any real owner walkthrough and its limitations.
-- The root README explains the initiative and next action; substantial working folders follow README as Design.
+- The root README explains the initiative and next action and preserves the progressive folder method and its approval and migration boundaries for later sessions; substantial working folders follow README as Design.
 - Only one Questions file exists, inside Help, and no separate intake, status, proposal, implementation, handover, or next-actions files were introduced.
 - Initial material was assessed for meaningful areas before the Vault fallback; provenance, uncertainty, privacy, and external-source links are preserved.
 - Setup materials and the reasons for the design are discoverable in Help; routine work reaches its sources and outputs without reading Help.
@@ -171,7 +174,7 @@ State whether checks were document walkthroughs or actual execution; do not inve
 - [ ] AGENTS.md contains only Introduction, Folder tree, and Guidelines as level-two sections.
 - [ ] Applicable areas begin with localized `03_Deliverables/`; existing material and explicitly named instruction and skill folders are preserved according to the approved migration.
 - [ ] The purpose of instructions and skills, and when to introduce them, is explained in plain language without presenting future folders as already created.
-- [ ] The root README explains the initiative; working-folder READMEs apply README as Design.
+- [ ] The root README explains the initiative and summarizes the progressive folder method and its change and migration boundaries for future sessions; working-folder READMEs apply README as Design.
 - [ ] One localized Questions file handles discovery; no separate setup or status files were added.
 - [ ] Meaningful areas were considered and created where justified; unassigned evidence has a canonical home in Vault source material.
 - [ ] All setup origins, rationale, decisions, and checks are kept or linked within Help.
