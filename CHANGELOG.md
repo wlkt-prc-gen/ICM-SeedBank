@@ -1,5 +1,11 @@
 # Changes
 
+## 3.1.0 - 2026-11-12
+
+- Add Explorer to Chat 1.0.0: one-use setup instructions and local VS Code extension source version 1.4.0 for right-click path insertion into a chosen assistant.
+- Include reviewed JavaScript, manifest, Windows installer, and packaging exclusions; no compiled VSIX or private workspace files.
+- Explain clipboard fallback, text-only paths, installation approval, repeated setup, rollback, and live editor verification limits. Existing seeds are unchanged.
+
 ## 3.0.1 - 2026-10-28
 
 - Keep a concise explanation of the progressive folder method and its approval and migration boundaries in each generated root README, accessible to later agent sessions.

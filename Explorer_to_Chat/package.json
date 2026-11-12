@@ -1,0 +1,90 @@
+{
+  "name": "copy-relative-path-slash",
+  "displayName": "Copy Relative Path (forward slashes)",
+  "description": "Right-click a file or folder to choose an AI chat for its relative path, or copy a forward-slash path or Markdown link.",
+  "version": "1.4.0",
+  "publisher": "walkertrust",
+  "private": true,
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "main": "./extension.js",
+  "activationEvents": [],
+  "contributes": {
+    "commands": [
+      {
+        "command": "prcCopyPath.addToChatPick",
+        "title": "Add Path to Chat…"
+      },
+      {
+        "command": "prcCopyPath.relative",
+        "title": "Copy Relative Path (/)"
+      },
+      {
+        "command": "prcCopyPath.markdownLink",
+        "title": "Copy Relative Path as Markdown Link"
+      }
+    ],
+    "menus": {
+      "explorer/context": [
+        {
+          "command": "prcCopyPath.addToChatPick",
+          "group": "navigation@101"
+        },
+        {
+          "command": "prcCopyPath.relative",
+          "group": "6_copypath@10"
+        },
+        {
+          "command": "prcCopyPath.markdownLink",
+          "group": "6_copypath@11"
+        }
+      ],
+      "editor/title/context": [
+        {
+          "command": "prcCopyPath.addToChatPick",
+          "group": "1_cutcopypaste@9"
+        },
+        {
+          "command": "prcCopyPath.relative",
+          "group": "1_cutcopypaste@10"
+        },
+        {
+          "command": "prcCopyPath.markdownLink",
+          "group": "1_cutcopypaste@11"
+        }
+      ],
+      "editor/context": [
+        {
+          "command": "prcCopyPath.relative",
+          "group": "9_cutcopypaste@10"
+        },
+        {
+          "command": "prcCopyPath.markdownLink",
+          "group": "9_cutcopypaste@11"
+        }
+      ]
+    },
+    "keybindings": [
+      {
+        "command": "prcCopyPath.addToChatPick",
+        "key": "ctrl+alt+shift+c",
+        "when": "explorerViewletFocus"
+      },
+      {
+        "command": "prcCopyPath.relative",
+        "key": "ctrl+alt+shift+r",
+        "when": "explorerViewletFocus || editorFocus"
+      }
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wlkt-prc-gen/ICM-SeedBank.git",
+    "directory": "Explorer_to_Chat"
+  },
+  "homepage": "https://github.com/wlkt-prc-gen/ICM-SeedBank/blob/main/Explorer_to_Chat/README.md"
+}
